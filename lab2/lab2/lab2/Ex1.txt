@@ -1,0 +1,20 @@
+//Requires: 2 arrays, and and b, of size greater than 0
+//Modifies: array a 
+ //Effects: Find max value of array a and array b. Then  replace the max value of a with the max value of b     
+	
+	public static void substituteMax(int[] a, int[] b) {
+        int maxOfA = a[0];
+        int index = 0;        
+		for (int i = 0; i < a.length; i++) {
+            		if(a[i] > maxOfA) {
+                		maxOfA = a[i];
+                		index = i;
+            				}
+        		}int maxOfB = b[0];
+        	for (int i = 0; i < b.length; i++) 
+			{
+            		if(b[i] > maxOfB) {
+                	maxOfB = b[i];
+            				  }
+        		}        a[index] = maxOfB;
+    }	
